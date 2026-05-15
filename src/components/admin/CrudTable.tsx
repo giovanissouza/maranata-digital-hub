@@ -49,7 +49,8 @@ export function CrudTable({
       blank[f.key] = f.type === "checkbox" ? false : "";
     }
     if (hasImage) blank.url_imagem = null;
-    const { error } = await supabase.from(table).insert(blank);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { error } = await (supabase.from(table) as any).insert(blank);
     if (error) return toast.error(error.message);
     toast.success("Adicionado");
     load();
@@ -57,7 +58,8 @@ export function CrudTable({
 
   const update = async (id: string, patch: Record<string, unknown>) => {
     setRows((r) => r.map((x) => (x.id === id ? { ...x, ...patch } : x)));
-    const { error } = await supabase.from(table).update(patch).eq("id", id);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { error } = await (supabase.from(table) as any).update(patch).eq("id", id);
     if (error) toast.error(error.message);
   };
 
