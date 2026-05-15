@@ -188,7 +188,7 @@ export function CrudTable({
                       )}
                       Enviar imagem
                     </button>
-                    {row.url_imagem && (
+                    {Boolean(row.url_imagem) && (
                       <button
                         onClick={() => update(row.id, { url_imagem: null })}
                         className="text-xs text-muted-foreground hover:text-destructive"
