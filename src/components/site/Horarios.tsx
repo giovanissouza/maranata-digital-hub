@@ -24,9 +24,9 @@ export function Horarios() {
 
   return (
     <section id="horarios" className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-24">
-        <header className="mb-16 text-center">
-          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">Reuniões</p>
+      <div className="mx-auto max-w-8xl px-6 py-24">
+        <header className="mb-16 text-center section-heading md:text-left">
+          <p className="section-lead mb-3 text-xs uppercase tracking-[0.3em]">Reuniões</p>
           <h2 className="font-serif text-4xl text-primary md:text-5xl">Nossos Horários</h2>
           <div className="mx-auto mt-6 h-px w-12 bg-primary/40" />
         </header>
@@ -39,10 +39,10 @@ export function Horarios() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className={`relative rounded-lg border p-8 transition ${
+              className={`relative surface-card p-8 transition ${
                 h.destaque_ceia
-                  ? "border-[var(--gold)]/40 bg-gradient-to-br from-[var(--gold)]/10 to-transparent"
-                  : "border-border bg-card hover:border-primary/30"
+                  ? "border-[var(--gold)]/40 bg-gradient-to-br from-[var(--gold)]/10 to-white/90"
+                  : ""
               }`}
             >
               {h.destaque_ceia && (

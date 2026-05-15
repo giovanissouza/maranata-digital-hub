@@ -35,36 +35,38 @@ export function AvisosCarousel() {
   const aviso = avisos[idx];
 
   return (
-    <section className="border-y border-border/60 bg-card">
-      <div className="mx-auto max-w-6xl px-6 py-16">
+    <section className="border-y border-border/60 bg-background">
+      <div className="mx-auto max-w-8xl px-6 py-16">
         <p className="mb-6 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
           Avisos
         </p>
-        <div className="relative grid gap-8 md:grid-cols-2 md:items-center">
-          <div className="aspect-[4/3] overflow-hidden rounded-md">
-            {aviso.url_imagem ? (
-              <img src={aviso.url_imagem} alt={aviso.titulo} className="h-full w-full object-cover" />
-            ) : (
-              <ImagePlaceholder label="Aviso" />
-            )}
-          </div>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={aviso.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="font-serif text-3xl text-primary md:text-4xl">{aviso.titulo}</h3>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">{aviso.resumo}</p>
-              {aviso.texto_completo && (
-                <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-foreground/80">
-                  {aviso.texto_completo}
-                </p>
+        <div className="surface-card p-8">
+          <div className="relative grid gap-8 md:grid-cols-2 md:items-center">
+            <div className="aspect-[4/3] overflow-hidden rounded-[1.5rem]">
+              {aviso.url_imagem ? (
+                <img src={aviso.url_imagem} alt={aviso.titulo} className="h-full w-full object-cover" />
+              ) : (
+                <ImagePlaceholder label="Aviso" />
               )}
-            </motion.div>
-          </AnimatePresence>
+            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={aviso.id}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h3 className="font-serif text-3xl text-primary md:text-4xl">{aviso.titulo}</h3>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">{aviso.resumo}</p>
+                {aviso.texto_completo && (
+                  <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-foreground/80">
+                    {aviso.texto_completo}
+                  </p>
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
         {avisos.length > 1 && (
           <div className="mt-10 flex items-center justify-center gap-4">

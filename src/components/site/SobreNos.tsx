@@ -17,14 +17,14 @@ export function SobreNos() {
   }, []);
 
   return (
-    <section id="sobre" className="bg-card">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-2 md:items-center">
+    <section id="sobre" className="bg-background">
+      <div className="mx-auto grid max-w-8xl gap-12 px-6 py-24 md:grid-cols-2 md:items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="aspect-[4/5] overflow-hidden rounded-md"
+          className="aspect-[4/5] overflow-hidden rounded-[2rem] surface-card"
         >
           {sobre?.url_imagem_principal ? (
             <img
@@ -41,8 +41,9 @@ export function SobreNos() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          className="glass-panel rounded-[2rem] p-8"
         >
-          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">Sobre Nós</p>
+          <p className="section-lead mb-3 text-xs uppercase tracking-[0.3em]">Sobre Nós</p>
           <h2 className="font-serif text-4xl text-primary md:text-5xl">Nossa História</h2>
           <div className="mt-6 h-px w-12 bg-primary/40" />
           <p className="mt-8 whitespace-pre-line text-base leading-relaxed text-foreground/80">

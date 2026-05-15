@@ -27,8 +27,8 @@ export function CardsGrid({
 
   return (
     <section id={id} className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-24">
-        <header className="mb-16 text-center">
+      <div className="mx-auto max-w-8xl px-6 py-24">
+        <header className="mb-16 text-center md:text-left">
           <p className="mb-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">{eyebrow}</p>
           <h2 className="font-serif text-4xl text-primary md:text-5xl">{title}</h2>
           <div className="mx-auto mt-6 h-px w-12 bg-primary/40" />
@@ -41,7 +41,7 @@ export function CardsGrid({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group overflow-hidden rounded-md border border-border bg-card transition hover:border-primary/30 hover:shadow-lg"
+              className="group surface-card overflow-hidden transition hover:border-primary/30 hover:shadow-2xl"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 {it.url_imagem ? (

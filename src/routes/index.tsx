@@ -6,6 +6,7 @@ import { SobreNos } from "@/components/site/SobreNos";
 import { CardsGrid } from "@/components/site/CardsGrid";
 import { YoutubeBanner } from "@/components/site/YoutubeBanner";
 import { PedidoOracao } from "@/components/site/PedidoOracao";
+import { TopNav } from "@/components/site/TopNav";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,6 +15,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main>
+      <TopNav />
       <Hero />
       <AvisosCarousel />
       <Horarios />
