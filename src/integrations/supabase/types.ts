@@ -14,7 +14,144 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      avisos: {
+        Row: {
+          criado_em: string
+          id: string
+          ordem: number
+          resumo: string
+          texto_completo: string | null
+          titulo: string
+          url_imagem: string | null
+        }
+        Insert: {
+          criado_em?: string
+          id?: string
+          ordem?: number
+          resumo: string
+          texto_completo?: string | null
+          titulo: string
+          url_imagem?: string | null
+        }
+        Update: {
+          criado_em?: string
+          id?: string
+          ordem?: number
+          resumo?: string
+          texto_completo?: string | null
+          titulo?: string
+          url_imagem?: string | null
+        }
+        Relationships: []
+      }
+      estrutura: {
+        Row: {
+          criado_em: string
+          descricao: string
+          id: string
+          nome: string
+          ordem: number
+          url_imagem: string | null
+        }
+        Insert: {
+          criado_em?: string
+          descricao: string
+          id?: string
+          nome: string
+          ordem?: number
+          url_imagem?: string | null
+        }
+        Update: {
+          criado_em?: string
+          descricao?: string
+          id?: string
+          nome?: string
+          ordem?: number
+          url_imagem?: string | null
+        }
+        Relationships: []
+      }
+      horarios: {
+        Row: {
+          criado_em: string
+          descricao: string | null
+          destaque_ceia: boolean
+          dia_semana: string
+          hora: string
+          id: string
+          nome_evento: string
+          ordem: number
+        }
+        Insert: {
+          criado_em?: string
+          descricao?: string | null
+          destaque_ceia?: boolean
+          dia_semana: string
+          hora: string
+          id?: string
+          nome_evento: string
+          ordem?: number
+        }
+        Update: {
+          criado_em?: string
+          descricao?: string | null
+          destaque_ceia?: boolean
+          dia_semana?: string
+          hora?: string
+          id?: string
+          nome_evento?: string
+          ordem?: number
+        }
+        Relationships: []
+      }
+      ministerios: {
+        Row: {
+          criado_em: string
+          descricao: string
+          id: string
+          nome: string
+          ordem: number
+          url_imagem: string | null
+        }
+        Insert: {
+          criado_em?: string
+          descricao: string
+          id?: string
+          nome: string
+          ordem?: number
+          url_imagem?: string | null
+        }
+        Update: {
+          criado_em?: string
+          descricao?: string
+          id?: string
+          nome?: string
+          ordem?: number
+          url_imagem?: string | null
+        }
+        Relationships: []
+      }
+      sobre_nos: {
+        Row: {
+          atualizado_em: string
+          id: string
+          texto_historia: string
+          url_imagem_principal: string | null
+        }
+        Insert: {
+          atualizado_em?: string
+          id?: string
+          texto_historia: string
+          url_imagem_principal?: string | null
+        }
+        Update: {
+          atualizado_em?: string
+          id?: string
+          texto_historia?: string
+          url_imagem_principal?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
