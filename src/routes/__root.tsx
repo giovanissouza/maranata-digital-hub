@@ -90,6 +90,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image", content: "/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-image.jpg" },
+      { name: "twitter:title", content: "Igreja Batista Maranata" },
+      { name: "description", content: "Maranata Digital Showcase is a dynamic, editable institutional website for Igreja Batista Maranata." },
+      { property: "og:description", content: "Maranata Digital Showcase is a dynamic, editable institutional website for Igreja Batista Maranata." },
+      { name: "twitter:description", content: "Maranata Digital Showcase is a dynamic, editable institutional website for Igreja Batista Maranata." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
